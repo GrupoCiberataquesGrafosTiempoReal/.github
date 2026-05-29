@@ -10,6 +10,7 @@ Para realizar la instalación y configuración se debe ejecutar el siguiente com
 curl -s https://raw.githubusercontent.com/GrupoCiberataquesGrafosTiempoReal/.github/main/setup.sh | bash
 ```
 
+>[!NOTE]
 > Para la ejecución de la configuración es necesario tener instalas las herramientos `curl` y `git`
 
 ## Instrucciones para ejecutar la solución
@@ -19,7 +20,7 @@ Para ejecutar la solución y poner en marcha los principales componentes de la m
 ```sh
 docker compose up -d
 ```
-
+>[!NOTE]
 > Para la ejecución de la solución es necesario tener instalada la herramienta `docker` (Docker Compose está integrado en Docker)
 
 Para terminar la ejecución de la solución se debe ejecutar el siguiente comando en el directorio de trabajo actual:
@@ -38,8 +39,10 @@ cd data-producer
 
 Allí, siguiendo las instrucciones presentes en el archivo [README.md](https://github.com/GrupoCiberataquesGrafosTiempoReal/data-producer/blob/main/README.md), se puede iniciar la producción de datos para su procesamiento mediante la solución.
 
+>[!IMPORTANT]
 > Para la configuración de las variables de entorno en `data-producer` se deben usar los siguientes valores:
 > - KAFKA_BROKERS=localhost:9092
 > - KAFKA_TOPIC=raw.data.v1
 
+>[!NOTE]
 > Los datos están instalados en el directorio `data`
