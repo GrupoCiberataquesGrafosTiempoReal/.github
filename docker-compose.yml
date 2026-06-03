@@ -41,3 +41,21 @@ services:
 
       API_URL: http://localhost:8080/classify
     network_mode: "host"
+
+  C6:
+    image: neo4j:2026.05-community-trixie
+    container_name: neo4j
+    ports:
+        - "7474:7474" #UI
+        - "7687:7687" #Bolt
+    environment:
+      NEO4J_AUTH: none
+
+      NEO4J_server_memory_heap_initial__size: 1G
+      NEO4J_server_memory_heap_max__size: 2G
+      NEO4J_server_memory_pagecache_size: 2G
+
+      NEO4J_PLUGINS: '["apoc","graph-data-science"]'
+    volumes:
+      - .volumes/neo4j/data:/data
+      - .volumes/neo4j/logs:/logs
