@@ -13,3 +13,4 @@ curl -L "https://github.com/GrupoCiberataquesGrafosTiempoReal/.github/archive/ma
 
 # Download reset volumes script
 curl -L -O https://raw.githubusercontent.com/GrupoCiberataquesGrafosTiempoReal/.github/main/reset_volumes.sh
+chmod +x reset_volumes.sh
