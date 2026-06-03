@@ -23,11 +23,20 @@ docker compose up -d
 >[!NOTE]
 > Para la ejecución de la solución es necesario tener instalada la herramienta `docker` (Docker Compose está integrado en Docker)
 
+## Instrucciones para detener la solución
+
 Para terminar la ejecución de la solución se debe ejecutar el siguiente comando en el directorio de trabajo actual:
 
 ```sh
 docker compose down
 ```
+
+>[!NOTE]
+> Para limpiar todos los volúmenes de Docker se puede utilizar siguiente comando: `docker volume prune --force`
+
+>[!TIP]
+> Para resetear los volúmenes de persistencia se puede ejecutar el script `reset_volumes.sh`
+
 
 ## Instrucciones para producción de datos
 
