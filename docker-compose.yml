@@ -31,6 +31,8 @@ services:
       C2:
         condition: service_started
         restart: true
+    restart: unless-stopped
+    network_mode: "host"
     environment:
       KAFKA_BROKERS: localhost:9092
       KAFKA_IN_TOPIC: raw.data.v1
@@ -40,7 +42,31 @@ services:
       BATCH_TIMEOUT: 500
 
       API_URL: http://localhost:8080/classify
+
+  C5:
+    build:
+      context: ./data-modeler
+    image: data-modeler
+    container_name: data-modeler
+    depends_on:
+      C2:
+        condition: service_started
+        restart: true
+      C6:
+        condition: service_started
+        restart: true
+    restart: unless-stopped
     network_mode: "host"
+    environment:
+      KAFKA_BROKERS=localhost:9092
+      KAFKA_TOPIC=classified.data.v1
+
+      BATCH_SIZE=10
+      BATCH_TIMEOUT=500
+
+      DB_URL=neo4j://localhost:7687
+      DB_USER=
+      DB_PASS=
 
   C6:
     image: neo4j:2026.05-community-trixie
