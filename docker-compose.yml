@@ -58,15 +58,15 @@ services:
     restart: unless-stopped
     network_mode: "host"
     environment:
-      KAFKA_BROKERS=localhost:9092
-      KAFKA_TOPIC=classified.data.v1
+      KAFKA_BROKERS: localhost:9092
+      KAFKA_TOPIC: classified.data.v1
 
-      BATCH_SIZE=10
-      BATCH_TIMEOUT=500
+      BATCH_SIZE: 10
+      BATCH_TIMEOUT: 500
 
-      DB_URL=neo4j://localhost:7687
-      DB_USER=
-      DB_PASS=
+      DB_URL: neo4j://localhost:7687
+      DB_USER: 
+      DB_PASS: 
 
   C6:
     image: neo4j:2026.05-community-trixie

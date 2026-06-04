@@ -4,6 +4,7 @@ curl -L -O https://raw.githubusercontent.com/GrupoCiberataquesGrafosTiempoReal/.
 # Clone components repos
 git clone https://github.com/GrupoCiberataquesGrafosTiempoReal/data-producer.git
 git clone https://github.com/GrupoCiberataquesGrafosTiempoReal/data-enricher.git
+git clone https://github.com/GrupoCiberataquesGrafosTiempoReal/data-modeler.git
 
 # Create persistency volumes
 mkdir -p .volumes/kafka .volumes/neo4j/{data,logs}
