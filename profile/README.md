@@ -28,7 +28,7 @@ docker compose up -d
 Para terminar la ejecución de la solución se debe ejecutar el siguiente comando en el directorio de trabajo actual:
 
 ```sh
-docker compose down
+docker compose down -v
 ```
 
 >[!TIP]
