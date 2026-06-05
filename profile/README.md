@@ -31,9 +31,6 @@ Para terminar la ejecución de la solución se debe ejecutar el siguiente comand
 docker compose down
 ```
 
->[!NOTE]
-> Para limpiar todos los volúmenes de Docker se puede utilizar siguiente comando: `docker volume prune --force`
-
 >[!TIP]
 > Para resetear los volúmenes de persistencia se puede ejecutar el script `reset_volumes.sh`
 
