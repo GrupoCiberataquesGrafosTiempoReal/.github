@@ -23,6 +23,9 @@ docker compose up -d
 >[!NOTE]
 > Para la ejecución de la solución es necesario tener instalada la herramienta `docker` (Docker Compose está integrado en Docker)
 
+>[!WARNING]
+> La creación de las imágenes de Docker puede requerir algunos minutos la primera vez que se ejecuta el comando
+
 ## Instrucciones para detener la solución
 
 Para terminar la ejecución de la solución se debe ejecutar el siguiente comando en el directorio de trabajo actual:
