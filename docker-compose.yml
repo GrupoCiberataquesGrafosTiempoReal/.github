@@ -90,7 +90,7 @@ services:
     image: neo4j:2026.05-community-trixie
     container_name: neo4j
     ports:
-        - "7474:7474" #UI
+        - "7474:7474" #Browser
         - "7687:7687" #Bolt
     environment:
       NEO4J_AUTH: none
