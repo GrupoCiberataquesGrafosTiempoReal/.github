@@ -26,6 +26,8 @@ docker compose up -d
 >[!WARNING]
 > La creación de las imágenes de Docker puede requerir algunos minutos la primera vez que se ejecuta el comando
 
+Una vez desplegados los contendores, la solución está lista para comenzar a procesar los datos producidos y enviados a ella (esto se puede hacer atendiendo a lo que se indica más abajo en la sección **Instrucciones para producción de datos**). La herramienta de visualización en tiempo real del grafo generado por la solución estará disponible para ser consultada en http://localhost:5173/, mientras el correspondiente contenedor (`visualizador-ciberataques`) esté funcionando.
+
 ## Instrucciones para detener la solución
 
 Para terminar la ejecución de la solución se debe ejecutar el siguiente comando en el directorio de trabajo actual:
@@ -36,7 +38,6 @@ docker compose down -v
 
 >[!TIP]
 > Para resetear los volúmenes de persistencia se puede ejecutar el script `reset_volumes.sh`
-
 
 ## Instrucciones para producción de datos
 

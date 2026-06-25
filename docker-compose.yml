@@ -42,7 +42,7 @@ services:
       KAFKA_OUT_TOPIC: classified.data.v1
 
       BATCH_SIZE: 10
-      BATCH_TIMEOUT: 500
+      BATCH_TIMEOUT: 1000
 
       API_URL: http://localhost:8080/classify
 
@@ -80,7 +80,7 @@ services:
       KAFKA_TOPIC: classified.data.v1
 
       BATCH_SIZE: 10
-      BATCH_TIMEOUT: 500
+      BATCH_TIMEOUT: 1000
 
       DB_URL: neo4j://localhost:7687
       DB_USER: ""
@@ -103,3 +103,19 @@ services:
     volumes:
       - .volumes/neo4j/data:/data
       - .volumes/neo4j/logs:/logs
+
+  C7:
+    build:
+      context: ./visualizador-ciberataques
+    image: visualizador-ciberataques
+    container_name: visualizador-ciberataques
+    depends_on:
+      C6:
+        condition: service_started
+        restart: true
+    restart: unless-stopped
+    network_mode: "host"
+    environment:
+      VITE_NEO4J_URI: neo4j://localhost:7687
+      VITE_NEO4J_USER: ""
+      VITE_NEO4J_PASSWORD: ""
