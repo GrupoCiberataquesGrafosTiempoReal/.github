@@ -6,6 +6,7 @@ git clone https://github.com/GrupoCiberataquesGrafosTiempoReal/data-producer.git
 git clone https://github.com/GrupoCiberataquesGrafosTiempoReal/data-enricher.git
 git clone https://github.com/GrupoCiberataquesGrafosTiempoReal/data-modeler.git
 git clone https://github.com/GrupoCiberataquesGrafosTiempoReal/mitre-detector.git
+git clone https://github.com/GrupoCiberataquesGrafosTiempoReal/visualizador-ciberataques.git
 
 # Create persistency volumes
 mkdir -p .volumes/kafka .volumes/neo4j/{data,logs}
