@@ -94,6 +94,7 @@ services:
         - "7687:7687" #Bolt
     environment:
       NEO4J_AUTH: none
+      NEO4J_dbms_default__database: poc
 
       NEO4J_server_memory_heap_initial__size: 1G
       NEO4J_server_memory_heap_max__size: 2G
@@ -117,5 +118,6 @@ services:
     network_mode: "host"
     environment:
       VITE_NEO4J_URI: neo4j://localhost:7687
+      VITE_NEO4J_DB_NAME: poc
       VITE_NEO4J_USER: ""
       VITE_NEO4J_PASSWORD: ""
