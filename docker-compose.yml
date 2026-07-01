@@ -109,6 +109,11 @@ services:
   C7:
     build:
       context: ./visualizador-ciberataques
+      args:
+        VITE_NEO4J_URI: neo4j://localhost:7687
+        VITE_NEO4J_DB_NAME: poc
+        VITE_NEO4J_USER: ""
+        VITE_NEO4J_PASSWORD: ""
     image: visualizador-ciberataques
     container_name: visualizador-ciberataques
     depends_on:
@@ -117,8 +122,3 @@ services:
         restart: true
     restart: unless-stopped
     network_mode: "host"
-    environment:
-      VITE_NEO4J_URI: neo4j://localhost:7687
-      VITE_NEO4J_DB_NAME: poc
-      VITE_NEO4J_USER: ""
-      VITE_NEO4J_PASSWORD: ""
